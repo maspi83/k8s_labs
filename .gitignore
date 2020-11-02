@@ -12,6 +12,7 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+*.vagrant
 
 # Mono auto generated files
 mono_crash.*
@@ -348,3 +349,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Ignore vagrant stuff
+*.vagrant
