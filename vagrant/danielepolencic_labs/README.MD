@@ -16,7 +16,7 @@ vagrant status # check status of all provisioned nodes
 vagrant ssh $NODE # ssh login to.
 ```
 
-# know issue  
+# known issue  / some problems
 ```
 vagrant@master:~$ kubectl get nodes
 The connection to the server 192.168.205.10:6443 was refused - did you specify the right host or port?
