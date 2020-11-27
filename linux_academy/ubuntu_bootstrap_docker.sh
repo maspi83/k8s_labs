@@ -1,3 +1,6 @@
+OS_CHECK=$(grep DISTRIB_ID /etc/*-release | cut -d'=' -f2)
+if [ "$OS_CHECK" != "Ubuntu" ]; then echo "Sorry this is only for Ubuntu distro's, exiting..." && exit 1; fi
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 sudo add-apt-repository \
