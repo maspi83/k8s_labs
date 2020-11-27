@@ -14,9 +14,10 @@ kubectl get po
 kubectl get ns
 kubectl get no -A
 kubectl get no -n kube-system
-kubectl get pods
-kubectl describe pod nginx
-kubectl delete pod nginx
+kubectl get po
+kubectl describe po POD_NAME
+kubectl delete po POD_NAME
+kubectl describe no NODE_NAME
 ```
 
 # Deploy  
