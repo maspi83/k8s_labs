@@ -32,5 +32,7 @@ kubectl exec busybox -- curl TARGET_POD_ID # get from kubectl get pods -o wide
 
 # Deploy  
 ```
-curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/nginx.yml | kubectl create -f -
+curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/nginx_pod.yml | kubectl create -f -
+curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/busybox_pod.yml | kubectl create -f -
+curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/nginx_deployment.yml | kubectl create -f -
 ```
