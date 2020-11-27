@@ -26,6 +26,8 @@ kubectl get po
 kubectl describe po POD_NAME
 kubectl delete po POD_NAME
 kubectl describe no NODE_NAME
+
+kubectl exec busybox -- curl 10.244.2.10
 ```
 
 # Deploy  
