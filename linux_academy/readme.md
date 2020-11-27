@@ -16,22 +16,30 @@ kubeadm token generate --> kubeadm token create hp9b0k.1g9tqz8vkf78ucwf --print-
 
 # Commands  
 ```
-kubectl cluster-info
-kubectl get no
-kubectl get po
-kubectl get ns
-kubectl get no -A
-kubectl get no -n kube-system
-kubectl get po
-kubectl describe po POD_NAME
-kubectl delete po POD_NAME
-kubectl describe no NODE_NAME
+# first thing
+alias k="kubectl"
 
-kubectl exec busybox -- curl TARGET_POD_ID # get from kubectl get pods -o wide 
+k cluster-info
+k get no
+k get po
+k get ns
+k get no -A
+k get no -n kube-system
+k get po
+k describe po POD_NAME
+k describe no NODE_NAME
 
-kubectl config current-context
-kubectl config get-contexts
-kubectl config set-context --current --namespace=kube-system
+k exec busybox -- curl TARGET_POD_ID # get from kubectl get pods -o wide 
+
+k config current-context
+k config get-contexts
+k config set-context --current --namespace=kube-system
+
+k delete po POD_NAME
+k delete --all pods # watch out whats your namespace or use -n just for sure
+
+k logs POD_NAME
+k logs POD_NAME -c CONTAINER_NAME # in case of mutliple containers
 ```
 
 # Deploy  
