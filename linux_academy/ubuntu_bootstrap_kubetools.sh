@@ -1,4 +1,6 @@
-#!/bin/bash
+OS_CHECK=$(grep DISTRIB_ID /etc/*-release | cut -d'=' -f2)
+if [ "$OS_CHECK" != "Ubuntu" ]; then echo "Sorry this is only for Ubuntu distro's, exiting..." && exit 1; fi
+
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 cat << EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
