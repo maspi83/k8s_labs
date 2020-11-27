@@ -10,3 +10,5 @@ sudo apt-get update
 sudo apt-get install -y docker-ce
 
 sudo apt-mark hold docker-ce
+
+docker version
