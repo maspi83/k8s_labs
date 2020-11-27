@@ -9,6 +9,6 @@ sudo apt-get update
 
 sudo apt-get install -y docker-ce
 
-sudo apt-mark hold docker-ce
 
 docker version
+if [ "$?" -eq "0" ]; then sudo apt-mark hold docker-ce; else echo "Checking docker installation"; fi
