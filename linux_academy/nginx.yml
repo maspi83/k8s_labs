@@ -28,3 +28,17 @@ spec:
   - name: nginx1
     image: nginx
   restartPolicy: Never
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mc2
+spec:
+  containers:
+  - name: producer
+    image: allingeek/ch6_ipc
+    command: ["./ipc", "-producer"]
+  - name: consumer
+    image: allingeek/ch6_ipc
+    command: ["./ipc", "-consumer"]
+  restartPolicy: Never
