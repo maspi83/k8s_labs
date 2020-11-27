@@ -15,3 +15,8 @@ kubectl get ns
 kubectl get no -A
 kubectl get no -n kube-system
 ```
+
+# Deploy  
+```
+kubectl create -f https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/nginx.yml
+```
