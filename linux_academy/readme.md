@@ -29,6 +29,7 @@ kubectl describe no NODE_NAME
 
 kubectl exec busybox -- curl TARGET_POD_ID # get from kubectl get pods -o wide 
 
+kubectl config current-context
 kubectl config get-contexts
 kubectl config set-context --current --namespace=kube-system
 ```
