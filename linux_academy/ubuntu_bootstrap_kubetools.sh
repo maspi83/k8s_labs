@@ -10,3 +10,6 @@ sudo apt-get update
 sudo apt-get install -y kubelet=1.15.7-00 kubeadm=1.15.7-00 kubectl=1.15.7-00
 
 sudo apt-mark hold kubelet kubeadm kubectl
+
+echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
