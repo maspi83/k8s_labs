@@ -9,7 +9,8 @@ sudo apt-get update
 
 sudo apt-get install -y kubelet=1.15.7-00 kubeadm=1.15.7-00 kubectl=1.15.7-00
 
-sudo apt-mark hold kubelet kubeadm kubectl
+kubeadm version
+if [ "$?" -eq "0" ]; then sudo apt-mark hold kubelet kubeadm kubectl; else echo "Checking kubetools installation"; fi
 
 echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
