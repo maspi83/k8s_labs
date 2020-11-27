@@ -6,6 +6,14 @@ curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/u
 # on master
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/ubuntu_bootstrap_k8smaster.sh | bash
 ```
+# Join master
+```
+kubeadm token list
+kubeadm token create --print-join-command
+or
+kubeadm token generate --> kubeadm token create hp9b0k.1g9tqz8vkf78ucwf --print-join-command 
+```
+
 # Commands  
 ```
 kubectl cluster-info
