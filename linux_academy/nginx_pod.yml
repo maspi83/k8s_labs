@@ -1,18 +1,27 @@
+--
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx
+  labels:
+    name: nginx
 ---
 apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-pod1
+  namespace: nginx
 spec:
   containers:
   - name: nginx1
     image: nginx
   restartPolicy: Never
----
+--- 
 apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-pod2
+  namespace: nginx
 spec:
   containers:
   - name: nginx1
@@ -23,6 +32,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-pod3
+  namespace: nginx
 spec:
   containers:
   - name: nginx1
@@ -33,6 +43,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: mc2
+  namespace: nginx
 spec:
   containers:
   - name: producer
@@ -42,3 +53,16 @@ spec:
     image: allingeek/ch6_ipc
     command: ["./ipc", "-consumer"]
   restartPolicy: Never
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: nginx
+spec:
+  containers:
+  - name: busybox
+    image: radial/busyboxplus:curl
+    args:
+    - sleep
+    - "1000"
