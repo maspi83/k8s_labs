@@ -47,4 +47,5 @@ k logs POD_NAME -c CONTAINER_NAME # in case of mutliple containers
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/nginx_pod.yml | kubectl create -f -
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/busybox_pod.yml | kubectl create -f -
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/nginx_deployment.yml | kubectl create -f -
+curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/nginx_store.yml | kubectl create -f -
 ```
