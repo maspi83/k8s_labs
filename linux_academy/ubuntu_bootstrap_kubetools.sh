@@ -1,3 +1,4 @@
+USER="cloud_user"
 OS_CHECK=$(grep DISTRIB_ID /etc/*-release | cut -d'=' -f2)
 if [ "$OS_CHECK" != "Ubuntu" ]; then echo "Sorry this is only for Ubuntu distro's, exiting..." && exit 1; fi
 
@@ -17,6 +18,9 @@ if [ "$?" -eq "0" ]; then sudo apt-mark hold kubelet kubeadm kubectl; else echo 
 echo "net.bridge.bridge-nf-call-iptables=1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 
-echo "Installing kubens and kubectx"
+echo "Installing kubens and kubectx + autocompletition"
 wget -q https://github.com/ahmetb/kubectx/releases/download/v0.9.1/kubens -O /usr/bin/kubens && chmod 755 /usr/bin/kubens
 wget -q https://github.com/ahmetb/kubectx/releases/download/v0.9.1/kubectx -O /usr/bin/kubectx && chmod 755 /usr/bin/kubectx
+wget -q https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/stuff/.bashrc -O /home/${USER}/.bashrc
+wget -q https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/stuff/kubectx.bash -O /etc/bash_completion.d/kubectx.bash 
+wget -q https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/stuff/kubens.bash -O /etc/bash_completion.d/kubens.bash
