@@ -1,10 +1,14 @@
 # Bootstrap k8s on lab servers  
 ```
+## ubuntu
 # all all
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/ubuntu_bootstrap_kubetools.sh | bash
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/ubuntu_bootstrap_docker.sh | bash
 # on master
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/ubuntu_bootstrap_k8smaster.sh | bash
+
+## basic centos 7 master bootstrap
+curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/centos7_bootstrap_all4one.sh | bash
 ```
 # Join master
 ```
