@@ -8,7 +8,7 @@ curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/u
 curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/ubuntu_bootstrap_k8smaster.sh | bash
 
 ## basic centos 7 master bootstrap
-curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/centos7_bootstrap_all4one.sh | bash
+curl -sL https://raw.githubusercontent.com/maspi83/k8s_labs/main/linux_academy/centos7_bootstrap_AIO.sh | bash
 ```
 # Join master
 ```
