@@ -54,7 +54,7 @@ docker version
 
 sleep 10
 
-yum install -y kubelet kubeadm kubectl
+sudo yum install -y  kubectl-1.15.1-0.x86_64 kubelet-1.15.1-0.x86_64 kubeadm-1.15.1-0.x86_64 kubernetes-cni-0.8.7-0.x86_64
 systemctl enable kubelet
 
 sleep 10
