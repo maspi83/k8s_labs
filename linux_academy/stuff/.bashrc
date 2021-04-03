@@ -118,5 +118,5 @@ alias k='kubectl'
 alias kns='kubens'
 alias kctx='kubectx'
 source <(kubectl completion bash)
-echo 'alias k=kubectl' >>~/.bashrc
-echo 'complete -F __start_kubectl k' >>~/.bashrc
+alias k=kubectl
+complete -F __start_kubectl k
