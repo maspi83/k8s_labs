@@ -117,3 +117,4 @@ fi
 alias k='kubectl'
 alias kns='kubens'
 alias kctx='kubectx'
+source <(kubectl completion bash)
