@@ -40,3 +40,26 @@ I1129 21:41:01.132046       1 server_others.go:142] kube-proxy node IP is an IPv
 W1129 21:41:01.243383       1 server_others.go:578] Unknown proxy mode "", assuming iptables proxy
 I1129 21:41:01.350172       1 server_others.go:185] Using iptables Proxier.
 ```
+
+### check DNS
+```
+root@controlplane:~# kubectl get po
+NAME                                   READY   STATUS    RESTARTS   AGE
+coredns-74ff55c5b-4c4qr                1/1     Running   0          13m
+coredns-74ff55c5b-w2wzw                1/1     Running   0          13m
+etcd-controlplane                      1/1     Running   0          13m
+kube-apiserver-controlplane            1/1     Running   0          13m
+kube-controller-manager-controlplane   1/1     Running   0          13m
+kube-flannel-ds-lc4vx                  1/1     Running   0          13m
+kube-proxy-2kpvb                       1/1     Running   0          13m
+kube-scheduler-controlplane            1/1     Running   0          13m
+
+NAME       TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)                  AGE
+kube-dns   ClusterIP   10.96.0.10   <none>        53/UDP,53/TCP,9153/TCP   14m
+root@controlplane:~# 
+
+root@controlplane:~# kubectl describe deployments.apps coredns | grep -A2 Args
+    Args:
+      -conf
+      /etc/coredns/Corefile
+```
