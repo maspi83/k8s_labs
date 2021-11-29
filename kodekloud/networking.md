@@ -30,3 +30,13 @@ root@controlplane:~# grep cluster-ip /etc/kubernetes/manifests/kube-apiserver.ya
     - --service-cluster-ip-range=10.96.0.0/12
 root@controlplane:~# 
 ```
+### Check proxy configuration
+```
+root@controlplane:~# kubectl logs kube-proxy-5m5pq 
+W1129 21:41:00.948965       1 proxier.go:661] Failed to load kernel module ip_vs_wrr with modprobe. You can ignore this message when kube-proxy is running inside container without mounting /lib/modules
+W1129 21:41:00.954723       1 proxier.go:661] Failed to load kernel module ip_vs_sh with modprobe. You can ignore this message when kube-proxy is running inside container without mounting /lib/modules
+I1129 21:41:01.131972       1 node.go:172] Successfully retrieved node IP: 10.59.200.9
+I1129 21:41:01.132046       1 server_others.go:142] kube-proxy node IP is an IPv4 address (10.59.200.9), assume IPv4 operation
+W1129 21:41:01.243383       1 server_others.go:578] Unknown proxy mode "", assuming iptables proxy
+I1129 21:41:01.350172       1 server_others.go:185] Using iptables Proxier.
+```
