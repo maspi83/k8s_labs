@@ -1,4 +1,4 @@
-# VIMRC
+## VIMRC
 ```
 # version 1
 set tabstop=2 softtabstop=2 shiftwidth=2
@@ -33,4 +33,12 @@ V or shift+v
 
 # insert content from command
 : read !base64 certificate
+```
+## kubectl
+```
+source<(kubectl completion bash)
+alias k=kubectl
+complete -F __start_kubectl k
+alias kns="kubectl config set-context --current --namespace"
+export DR=" --dry-run=client -o yaml"
 ```
