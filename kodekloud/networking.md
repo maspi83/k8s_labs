@@ -24,3 +24,9 @@ Peer not in list; removing persisted data
 INFO: 2021/11/29 21:40:45.452843 Command line options: map[conn-limit:200 datapath:datapath db-prefix:/weavedb/weave-net docker-api: expect-npc:true http-addr:127.0.0.1:6784 ipalloc-init:consensus=0 ipalloc-range:10.50.0.0/16 metrics-addr:0.0.0.0:6782 name:82:f9:c7:e2:8b:66 nickname:controlplane no-dns:true no-masq-local:true port:6783]
 INFO: 2021/11/29 21:40:45.452918 
 ```
+### IP range for k8s cluster
+```
+root@controlplane:~# grep cluster-ip /etc/kubernetes/manifests/kube-apiserver.yaml 
+    - --service-cluster-ip-range=10.96.0.0/12
+root@controlplane:~# 
+```
