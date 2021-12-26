@@ -1,0 +1,5 @@
+deploy:
+  replicas: 1 
+  nginx:
+    version: 1.14.2
+    port: 8080
