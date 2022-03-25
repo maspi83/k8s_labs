@@ -19,6 +19,10 @@ set ruler
 # version 3
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+# version 4
+set nu # set numbers
+set ts=2 sw=2 sts=2 et ai ruler
+
 # smart paste
 set paste
 
@@ -29,7 +33,7 @@ set list
 retab
 
 # VIM Smart
-V or shift+v
+V or shift+v and then > or <
 
 # insert content from command
 : read !base64 certificate

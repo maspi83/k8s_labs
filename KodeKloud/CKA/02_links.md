@@ -1,0 +1,10 @@
+https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/
+https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/
+https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
+https://blog.codonomics.com/2019/09/essential-vim-for-ckad-or-cka-exam.html
+https://dev.to/marcoieni/ckad-2021-tips-vimrc-bashrc-and-cheatsheet-hp3
+https://dev.to/subodev/50-questions-for-ckad-and-cka-exam-3bjm
+https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
+https://github.com/dgkanatsios/CKAD-exercises
+https://pmvk.medium.com/tips-to-crack-certified-kubernetes-administrator-cka-exam-c949c7a9bea1
+https://github.com/kodekloudhub/certified-kubernetes-administrator-course
