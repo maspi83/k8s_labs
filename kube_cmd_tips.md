@@ -19,9 +19,9 @@ set ruler
 # version 3
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-# version 4
-set nu # set numbers
-set ts=2 sw=2 sts=2 et ai ruler
+# version 4 sofar best
+set ts=2 sw=2 sts=2 et ai ruler nu
+syntax on
 
 # smart paste
 set paste
@@ -42,7 +42,8 @@ V or shift+v and then > or <
 ```
 source<(kubectl completion bash)
 alias k=kubectl
-complete -F __start_kubectl k
+alias ktest="kubectl --dry-run=client -o yaml"
+complete -F __start_kubectl k ktest
 alias kns="kubectl config set-context --current --namespace"
 export DR=" --dry-run=client -o yaml"
 ```
