@@ -9,3 +9,5 @@ https://github.com/dgkanatsios/CKAD-exercises
 https://pmvk.medium.com/tips-to-crack-certified-kubernetes-administrator-cka-exam-c949c7a9bea1
 https://github.com/kodekloudhub/certified-kubernetes-administrator-course
 https://github.com/kodekloudhub/certified-kubernetes-administrator-course
+https://www.redhat.com/en/topics/containers/kubernetes-architecture
+https://www.appvia.io/blog/components-of-kubernetes-architecture
