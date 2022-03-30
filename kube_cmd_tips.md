@@ -1,4 +1,4 @@
-## VIMRC
+## VI .vimrc
 ```
 # version 1
 set tabstop=2 softtabstop=2 shiftwidth=2
@@ -36,14 +36,23 @@ retab
 V or shift+v and then > or <
 
 # insert content from command
-: read !base64 certificate
+: read !base64 certificate, format yaml and then use |  
+
+cat dumy.csr | base64 | tr -d '\n'
+
 ```
-## kubectl
+## kubectl .bashrc
 ```
+source /usr/share/bash-completion/bash_completion
 source<(kubectl completion bash)
 alias k=kubectl
 alias ktest="kubectl --dry-run=client -o yaml"
 complete -F __start_kubectl k ktest
 alias kns="kubectl config set-context --current --namespace"
 export DR=" --dry-run=client -o yaml"
+```
+
+## Commands
+```
+kubectl api-resources --verbs=list
 ```

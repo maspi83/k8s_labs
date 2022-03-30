@@ -51,4 +51,10 @@ root@controlplane:~#
 
 root@controlplane:~# cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep range
     - --service-cluster-ip-range=10.96.0.0/12
+
+Format - kubectl create ingress <ingress-name> --rule="host/path=service:port"
+Example - kubectl create ingress ingress-test --rule="wear.my-online-store.com/wear*=wear-service:80"
+
+
+kubectl expose deployment ingress-controller --type=NodePort --port=80 --name=ingress --dry-run=client -o yaml > ingress.yaml
 ```
