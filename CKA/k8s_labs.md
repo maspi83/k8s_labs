@@ -46,3 +46,38 @@ kubeadm join 172.16.10.210:6443 --token 9tjntl.10plpxqy85g8a0ui \
 
 ETCDCTL_API=3 etcdctl snapshot save snapshot.db --endpoints=*:2379 --cacert /etc/kubernetes/pki/etcd/server.crt --cert /etc/kubernetes/pki/etcd/ca.crt --key /etc/kubernetes/pki/etcd/ca.key
 ```
+
+## update deployment parts
+```
+kubectl create deployment nginx --image=nginx:1.19.5 --replicas=6
+kubectl set image deployment nginx nginx=nginx:1.19.6 --record=true
+kubectl get deployment nginx -o yaml > nginx_deployment.yaml
+kubectl patch deployments.apps nginx --patch-file=deplo.yaml
+```
+## Use CM, 
+source: 
+[link](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
+[link](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/)
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-configmap
+spec:
+  containers:
+    - name: nginx-configmap
+      image: nginx
+      command: [ "/bin/sh", "-c", "env" ]
+      env:
+        - name: OWNER
+          valueFrom:
+            configMapKeyRef: or secretKeyRef:
+              name: mycm
+              key: owner
+
+kubectl logs nginx-configmap | grep OWNER
+```
+
+## Limits, source: [link](https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-constraint-namespace/)
+```
+```
