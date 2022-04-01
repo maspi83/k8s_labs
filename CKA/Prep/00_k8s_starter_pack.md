@@ -12,3 +12,10 @@ export DR=" --dry-run=client -o yaml"
 ## vimrc
 set ts=2 sw=2 sts=2 et ai ruler nu
 syntax on
+
+## imperative commands
+```
+# use -o yaml --dry-run=client if you want to generate just yaml
+# setup .bashrc for auto-completion
+# master using kubectl explain, k explain rs.kind --recursive
+```
