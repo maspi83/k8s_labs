@@ -22,4 +22,5 @@ k get pod redis -o yaml > pod_redis.yaml
 
 # Debuging pods, when checking issues check logs or describe pods (also from rs or deployments )
 
+k get po -n testns
 ```
