@@ -23,4 +23,12 @@ k get pod redis -o yaml > pod_redis.yaml
 # Debuging pods, when checking issues check logs or describe pods (also from rs or deployments )
 
 k get po -n testns
+
+# update deployment
+k get deployments.apps frontend -o yaml | grep -i image
+k get deployments.apps frontend -o yaml | grep -i image
+
+
+# CM
+k create configmap webapp-color --from-literal=APP_COLOR=darkblue
 ```
