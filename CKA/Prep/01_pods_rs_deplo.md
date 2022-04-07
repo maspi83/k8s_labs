@@ -31,4 +31,7 @@ k get deployments.apps frontend -o yaml | grep -i image
 
 # CM
 k create configmap webapp-color --from-literal=APP_COLOR=darkblue
+
+# add sa
+  serviceAccountName: build-robot
 ```

@@ -6,4 +6,8 @@ kubectl edit role -n blue developer
 
 kubectl create clusterrole node-admin --verb=get,watch,list,create,delete --resource=nodes
 kubectl create clusterrolebinding michelle-binding --clusterrole=node-admin --user=michelle
+
+kubectl api-resources 
+kubectl api-resources -o wide | grep persistentvolume
+kubectl auth can-i list storageclasses --as michelle
 ```
