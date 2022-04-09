@@ -37,4 +37,9 @@ k create configmap webapp-color --from-literal=APP_COLOR=darkblue
 # add sa
   serviceAccountName: build-robot
 # sidecar
+
+
+# run on a specific node with certain label
+  nodeSelector:
+    disktype: ssd
 ```
