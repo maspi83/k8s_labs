@@ -1,4 +1,6 @@
 ```
+# check deployments, replicas, change rollout, update, change updates
+# for pod use --restart=Never
 k scale rs new-replica-set --replicas=5
 k get po --no-headers 
 
@@ -32,6 +34,10 @@ k get deployments.apps frontend -o yaml | grep -i image
 # CM
 k create configmap webapp-color --from-literal=APP_COLOR=darkblue
 
+<<<<<<< Updated upstream
 # add sa
   serviceAccountName: build-robot
+=======
+# sidecar
+>>>>>>> Stashed changes
 ```

@@ -55,4 +55,5 @@ export DR=" --dry-run=client -o yaml"
 ## Commands
 ```
 kubectl api-resources --verbs=list
+kubectl api-resources
 ```

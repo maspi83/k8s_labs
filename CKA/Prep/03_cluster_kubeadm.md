@@ -24,4 +24,13 @@ kubectl uncordon controlplane
 # Check /etc/kubernetes/manifests/etcd, /etc/kubernetes/pki
 ETCDCTL_API=3 etcdctl snapshot save /opt/snapshot-pre-boot.db --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key --cacert=/etc/kubernetes/pki/etcd/ca.crt --endpoints=https://127.0.0.1:2379,https://10.32.95.3:2379
 Snapshot saved at /opt/snapshot-pre-boot.db
+
+# check permissions 
+/etc/systemd/system/SCRIPTS - check process user
+
+# Drain
+kubectl drain --ignore-daemonsets --delete-local-data
+
+# know systemctl
+start, enable
 ```
