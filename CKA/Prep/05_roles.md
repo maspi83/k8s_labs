@@ -10,4 +10,13 @@ kubectl create clusterrolebinding michelle-binding --clusterrole=node-admin --us
 kubectl api-resources 
 kubectl api-resources -o wide | grep persistentvolume
 kubectl auth can-i list storageclasses --as michelle
+
+kubectl auth can-i get po --as john -n development
+yes
+
+kubectl get po --as john
+Error from server (Forbidden): pods is forbidden: User "john" cannot list resource "pods" in API group "" in the namespace "default"
+
+kubectl get po --as john -n development
+No resources found in development namespace.
 ```
